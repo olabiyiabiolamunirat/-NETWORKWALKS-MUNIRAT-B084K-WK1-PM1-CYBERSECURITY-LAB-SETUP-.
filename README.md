@@ -27,7 +27,7 @@ Building an isolated virtual lab for penetration testing and ethical hacking pra
 # Week 01 - My Cybersecurity Lab Setup
 
 **Name: Olabiyi Abiola Munirat**
-**Program: Cybersecurity B082 - Networkwalks**
+**Program: Cybersecurity B084 - Networkwalks**
 **LinkedIn: https://www.linkedin.com/in/olabiyi-abiola-05a584429**
 **GitHub: https://github.com/Olabiyiabiolamunirat**
 
@@ -139,3 +139,7 @@ Manual file editing conflicted with NetworkManager. Fix: Used `nmcli` method.
 
 📌 Info
 Program: Cybersecurity at Networkwalks | Week 01 | Project: Cybersecurity & Pentesting Lab Setup
+
+👤 Author
+Olabiyi Abiola Munirat
+Cybersecurity Student | B084
