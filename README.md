@@ -94,13 +94,12 @@ Imported Kali and set: Settings > Network > Attached to: NAT Network > Name: Nat
 **Step 4: Set Static IP**
 I used nmcli to avoid breaking the network:
 
-```bash
 nmcli connection modify "Wired connection 1" ipv4.addresses 10.0.0.2/24 ipv4.gateway 10.0.0.1 ipv4.dns "8.8.8.8" ipv4.method manual
 nmcli connection down "Wired connection 1"
 nmcli connection up "Wired connection 1"
 ip a
 
-*Step 5: Take Snapshot*
+**Step 5: Take Snapshot**
 Created snapshot named `Clean-Kali-Base` - my clean restore point.
 
 🔎 How I Verified It
@@ -112,7 +111,7 @@ Created snapshot named `Clean-Kali-Base` - my clean restore point.
 
 🐞 Challenges I Faced
 
-*1. DNS Failed*
+**1. DNS Failed**
 Could ping 8.8.8.8 but not http://google.com. Fix:
 
 sudo nano /etc/resolv.conf
@@ -120,10 +119,10 @@ nameserver 8.8.8.8
 nameserver 1.1.1.1
 sudo systemctl restart NetworkManager
 
-*2. VMs Not Talking*
+**2. VMs Not Talking**
 I had NAT on one and NAT Network on another. Fix: Changed both to same `NatNetwork`.
 
-*3. Static IP Broke Connection*
+**3. Static IP Broke Connection**
 Manual file editing conflicted with NetworkManager. Fix: Used `nmcli` method.
 
 💡 What I Learned
